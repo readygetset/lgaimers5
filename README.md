@@ -92,7 +92,7 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 - Confirmed that complex sampling methods significantly enhance model performance.
 - Applied SMOTEENN, which showed the best performance, to the baseline.
 <div align="center">
-    <img src="assets/model5.png" alt="Model5">
+    <img src="assets/model5.png" alt="Model5" width="100px">
 </div>
 
 ### ▶️ Model 6: Sampling Rate Ensemble
@@ -106,16 +106,16 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 </div>
 
 ### ▶️ Model 7: Deep Density Hybrid Learning
-- Limitations of SMOTE:
-  - SMOTE considers only minority samples, potentially disrupting learning balance by ignoring the influence of majority samples.
-  - In high-dimensional spaces, Euclidean distance may inaccurately calculate distances, distorting data distribution.
-- Proposed Method from "Learning From Imbalanced Data With Deep Density Hybrid Sampling":
-  - Introduces a Hybrid Sampling technique using an AutoEncoder-based Embedding Network.
-  - Combines three loss terms (Cross-Entropy, Center, Reconstruction) to maximize sampling performance.
-  - Ensures high-quality data for the minority class through Density-based Filtering.
-  - Applied the proposed method and hyperparameters (e.g., number of layers in the embedding layer, sampling ratio) as suggested in the paper.
-  - Compared to SMOTENC and SMOTEENN used in Baseline and Model#5, the method showed comparable or slightly improved performance.
-  - The DDHS technique achieved an average F1 score of 0.9496, outperforming SMOTE-based methods.
+**Limitations of SMOTE:**
+- SMOTE considers only minority samples, potentially disrupting learning balance by ignoring the influence of majority samples.
+- In high-dimensional spaces, Euclidean distance may inaccurately calculate distances, distorting data distribution.  
+**Proposed Method from "Learning From Imbalanced Data With Deep Density Hybrid Sampling":**
+- Introduces a Hybrid Sampling technique using an AutoEncoder-based Embedding Network.
+- Combines three loss terms (Cross-Entropy, Center, Reconstruction) to maximize sampling performance.
+- Ensures high-quality data for the minority class through Density-based Filtering.
+- Applied the proposed method and hyperparameters (e.g., number of layers in the embedding layer, sampling ratio) as suggested in the paper.
+- Compared to SMOTENC and SMOTEENN used in Baseline and Model#5, the method showed comparable or slightly improved performance.
+- The DDHS technique achieved an average F1 score of 0.9496, outperforming SMOTE-based methods.
 <div align="center">
     <img src="assets/model7.png" alt="Model7">
 </div>
