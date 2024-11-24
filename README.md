@@ -108,7 +108,8 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 ### ▶️ Model 7: Deep Density Hybrid Learning
 **Limitations of SMOTE:**
 - SMOTE considers only minority samples, potentially disrupting learning balance by ignoring the influence of majority samples.
-- In high-dimensional spaces, Euclidean distance may inaccurately calculate distances, distorting data distribution.  
+- In high-dimensional spaces, Euclidean distance may inaccurately calculate distances, distorting data distribution.
+  
 **Proposed Method from "Learning From Imbalanced Data With Deep Density Hybrid Sampling":**
 - Introduces a Hybrid Sampling technique using an AutoEncoder-based Embedding Network.
 - Combines three loss terms (Cross-Entropy, Center, Reconstruction) to maximize sampling performance.
