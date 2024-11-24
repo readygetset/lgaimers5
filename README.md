@@ -9,13 +9,18 @@
 - Replaced null and outlier values ('OK') with 0 in certain columns (e.g., HEAD NORMAL COORDINATE X AXIS(Stage1) Collect Result_Dam).
 - Deleted columns with only a single unique value (40 columns).
 - Identified and removed redundant columns with high correlation, retaining only one, using a correlation coefficient with a threshold of 0.94.
-  <img src="assets/feature_selection.png">
+<div align="center">
+    <img src="assets/feature_selection.png" alt="Feature Selection">
+</div>
   
 ### ▶️ Upsampling
 - Class imbalance of train data with an AbNormal to Normal ratio of 0.06:1.
 - Utilized SMOTENC to address this imbalance through upsampling.
 - Upsampled AbNormal data to reach half the quantity of Normal data.
 - Downsampled Normal data to equal the amount of augmented AbNormal data.
+<div align="center">
+    <img src="assets/upsampling.png" alt="Upsampling">
+</div>
 
 ### ▶️ Rule Discovery
 - Analyzed groups of common columns and discovered several rules:
@@ -75,6 +80,9 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 - Set an importance threshold of 0.6 through experimentation, resulting in 52 selected features.
 - Applied SMOTENC to upsample the minority class to 30% of the majority class and downsampled the majority class to 1.2 times the minority class.
 - Trained the model using CatBoost with 4 K-Fold splits, 1000 iterations, a learning rate of 0.1, and a depth of 9.
+<div align="center">
+    <img src="assets/model4.png" alt="Model4">
+</div>
 
 ### ▶️ Model 5: Oversampling Techniques
 - Conducted experiments with various oversampling techniques under the same conditions as the baseline SMOTENC, using average F1 score as the primary performance metric.
@@ -83,6 +91,9 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 - RandomOverSampler showed lower performance compared to other methods, with an average F1 score of 0.8849.
 - Confirmed that complex sampling methods significantly enhance model performance.
 - Applied SMOTEENN, which showed the best performance, to the baseline.
+<div align="center">
+    <img src="assets/model5.png" alt="Model5">
+</div>
 
 ### ▶️ Model 6: Sampling Rate Ensemble
 - Randomly selected pairs of features and performed arithmetic operations, then trained a Decision Tree on the resulting features.
@@ -90,6 +101,9 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 - Removed 28 columns that consistently recorded high loss.
 - Discovered an accuracy-precision tradeoff depending on the undersample/upsample ratio.
 - Consequently, sampled data at various ratios and trained models to create an ensemble.
+<div align="center">
+    <img src="assets/model6.png" alt="Model6">
+</div>
 
 ### ▶️ Model 7: Deep Density Hybrid Learning
 - Limitations of SMOTE:
@@ -102,6 +116,9 @@ Established a baseline setting after surpassing 0.2 points, which was further de
   - Applied the proposed method and hyperparameters (e.g., number of layers in the embedding layer, sampling ratio) as suggested in the paper.
   - Compared to SMOTENC and SMOTEENN used in Baseline and Model#5, the method showed comparable or slightly improved performance.
   - The DDHS technique achieved an average F1 score of 0.9496, outperforming SMOTE-based methods.
+<div align="center">
+    <img src="assets/model7.png" alt="Model7">
+</div>
 
 ### ▶️ Model 8: AutoML
 - Utilized the mljar-supervised library for model training.
