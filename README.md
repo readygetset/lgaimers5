@@ -9,6 +9,7 @@
 - Replaced null and outlier values ('OK') with 0 in certain columns (e.g., HEAD NORMAL COORDINATE X AXIS(Stage1) Collect Result_Dam).
 - Deleted columns with only a single unique value (40 columns).
 - Identified and removed redundant columns with high correlation, retaining only one, using a correlation coefficient with a threshold of 0.94.
+  <img src="assets/feature selection">
   
 ### ▶️ Upsampling
 - Class imbalance of train data with an AbNormal to Normal ratio of 0.06:1.
