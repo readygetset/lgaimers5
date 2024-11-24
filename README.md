@@ -107,7 +107,7 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 - Initially attempted to address data imbalance through sampling, but results were unsatisfactory.
 - Decided against applying sampling, as a study by Yotam Elo ("To SMOTE, or not to SMOTE?", 2022) indicated that strong learners may perform worse with oversampling.
 
-### ▶️ Ensemble Model
+### ▶️ Model Ensemble
 - Performed Hard Voting using 8 submission files generated from different models.
 - Hard Voting is an excellent method for enhancing performance by compensating for individual model weaknesses.
 - Frequently achieves superior results in handling imbalanced data in various Kaggle Competitions.
