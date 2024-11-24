@@ -19,7 +19,7 @@
 - Upsampled AbNormal data to reach half the quantity of Normal data.
 - Downsampled Normal data to equal the amount of augmented AbNormal data.
 <div align="center">
-    <img src="assets/upsampling.png" alt="Upsampling" width="500px">
+    <img src="assets/upsampling.png" alt="Upsampling" width="300px">
 </div>
 
 ### ▶️ Rule Discovery
@@ -92,7 +92,7 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 - Confirmed that complex sampling methods significantly enhance model performance.
 - Applied SMOTEENN, which showed the best performance, to the baseline.
 <div align="center">
-    <img src="assets/model5.png" alt="Model5" width="300px">
+    <img src="assets/model5.png" alt="Model5" width="250px">
 </div>
 
 ### ▶️ Model 6: Sampling Rate Ensemble
