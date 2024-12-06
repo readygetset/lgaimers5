@@ -124,7 +124,7 @@ Established a baseline setting after surpassing 0.2 points, which was further de
 ### ▶️ Model 8: AutoML
 - Utilized the mljar-supervised library for model training.
 - Initially attempted to address data imbalance through sampling, but results were unsatisfactory.
-- Decided against applying sampling, as a study by Yotam Elo ("To SMOTE, or not to SMOTE?", 2022) indicated that strong learners may perform worse with oversampling.
+- Decided not to apply sampling, as a study by Yotam Elo ("To SMOTE, or not to SMOTE?", 2022) indicated that strong learners may perform worse with oversampling.
 
 ### ▶️ Model Ensemble
 - Performed Hard Voting using 8 submission files generated from different models.
